@@ -21,11 +21,11 @@ print("Boston housing dataset has {} data points with {} variables each.".format
 
 # ## Data Exploration
 
-minimum_price = prices.min()
-maximum_price = prices.max()
-mean_price = prices.mean()
-median_price = prices.median()
-std_price = prices.std()
+minimum_price = np.min(prices)
+maximum_price = np.max(prices)
+mean_price = np.mean(prices)
+median_price = np.median(prices)
+std_price = np.std(prices)
 
 # Show the calculated statistics
 print("Statistics for Boston housing dataset:\n")
@@ -158,7 +158,7 @@ vs.ModelComplexity(X_train, y_train)
 # **Hint:** High bias is a sign of underfitting(model is not complex enough to pick up the nuances in the data) and high variance is a sign of overfitting(model is by-hearting the data and cannot generalize well). Think about which model(depth 1 or 10) aligns with which part of the tradeoff.
 
 # **Answer: **
-# The model with a depth of 1 suffer from high bias (but low variance as they have around the same score). In contrast, the model with depth 10 obviously from high variance as the difference between the training and validation score is big.
+# The model with a depth of 1 suffer from high bias (but low variance as they have around the same score). In contrast, the model with depth 10 obviously from high variance as the difference between the training and validation score is big. Visual cues for our choices are that the training curves for model with depth 1 achieved a low accuracy, around 0.45, whereas the model of depth 10 had an oustanding training score of almost 0.95, whereas the testing curve was capped at around 0.7, showing that the model failed to achieve the same performance with new observations. This is a sign of over-fitting.
 
 # ### Question 6 - Best-Guess Optimal Model
 # * Which maximum depth do you think results in a model that best generalizes to unseen data?
@@ -206,20 +206,24 @@ vs.ModelComplexity(X_train, y_train)
 
 # **Answer: **
 
-# A model is usually assessed by its ability to predict new observations. With
-# this respect, a part of the original data set is put aside, the so-called
-# *test* set, is hidden to the model when its parameters are trained. When
-# using, grid search, we implicity use the test set as a part of the training
-# phase, as we compare the error of the different hyperparameters on the test
-# set, which goes against its definition. _k-fold_ cross validation is a
-# technique to prevent this: instead of splitting the original data set in two
-# unbalanced quanitity, we split the data into _k_ sets of approximatively the
-# same size, then _k-1_ sets are used to train the model and the generalisation
-# error is asssesd on the part of the last set. We repeat the process _k_ times
-# by selecting a different test set each time in order to get _k_ estimates of
-# the generalization error. A final estimate is given by taking the
-# average. This benefits grid search as it reduce the bias of the estimator
-# introduced by selecting a fix test set.
+A model is usually assessed by its ability to predict new observations. With
+this respect, a part of the original data set is put aside, the so-called
+*test* set, is hidden to the model when its parameters are trained. When using,
+grid search, we implicity use the test set as a part of the training phase, as
+we compare the error of the different hyperparameters on the test set, which
+goes against its definition. _k-fold_ cross validation is a technique to
+prevent this: instead of splitting the original data set in two unbalanced
+quanitity, we add another layer of splitting. The training data set is split
+into _k_ sets of approximatively the same size, then _k-1_ sets are used to
+train the model and the generalisation error is asssesd on the set left out of
+the data input of the model. We repeat the process _k_ times by selecting a
+different test set each time in order to get _k_ estimates of the
+generalization error. A final estimate is given by taking the average.
+
+This benefits grid search as it reduce the variance of the estimator introduced by
+selecting a fix validation set.
+
+
 
 # ### Implementation: Fitting a Model
 # Your final implementation requires that you bring everything together and
@@ -398,27 +402,27 @@ vs.PredictTrials(features, prices, fit_model, client_data)
 
 # **Answer: **
 
-In a real world setting, the model should not be used as it is now specified.
+# In a real world setting, the model should not be used as it is now specified.
 
-Inflation
-is clearly a big factor and it has been quite nonlinear in the past forty
-years. Maybe original prices could standardized, and then scaled back to actual
-prices with new measures, as the two features are still relevant today. Another
-reason to avoid using the data is the ignorance of the properties of the house
-itself: the size and type of the house, the quality of construction and size of
-the garden should be incorporated as they might have an impact on the price.
+# Inflation
+# is clearly a big factor and it has been quite nonlinear in the past forty
+# years. Maybe original prices could standardized, and then scaled back to actual
+# prices with new measures, as the two features are still relevant today. Another
+# reason to avoid using the data is the ignorance of the properties of the house
+# itself: the size and type of the house, the quality of construction and size of
+# the garden should be incorporated as they might have an impact on the price.
 
-Obviously, the model can predict prices in a similar environment to the data
-from which it was collected: we collected data from the city of Boston and the
-relationships between the dependent dimensions and the prices should remain,
-but the prices classification must vary depending the city or the
-region. Prices in New York should be higher, but in a rural city the features
-might have less impact than some other measures.
+# Obviously, the model can predict prices in a similar environment to the data
+# from which it was collected: we collected data from the city of Boston and the
+# relationships between the dependent dimensions and the prices should remain,
+# but the prices classification must vary depending the city or the
+# region. Prices in New York should be higher, but in a rural city the features
+# might have less impact than some other measures.
 
-Using characteristics external from the house to determine its prices is a fair
-practice, although one should definitively incorporate more specification of
-the house (a single room flat should be much cheaper than a twelve rooms
-mansion).
+# Using characteristics external from the house to determine its prices is a fair
+# practice, although one should definitively incorporate more specification of
+# the house (a single room flat should be much cheaper than a twelve rooms
+# mansion).
 
 # > **Note**: Once you have completed all of the code implementations and successfully answered each question above, you may finalize your work by exporting the iPython Notebook as an HTML document. You can do this by using the menu above and navigating to
 # **File -> Download as -> HTML (.html)**. Include the finished document along with this notebook as your submission.

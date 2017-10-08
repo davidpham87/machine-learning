@@ -13,7 +13,7 @@ import matplotlib.pyplot as pl
 import numpy as np
 import sklearn.model_selection as curves
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.cross_validation import ShuffleSplit, train_test_split
+from sklearn.model_selection import ShuffleSplit, train_test_split
 
 def ModelLearning(X, y):
     """ Calculates the performance of several models with varying sizes of training data.
