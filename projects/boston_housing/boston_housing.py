@@ -181,6 +181,19 @@ vs.ModelComplexity(X_train, y_train)
 
 # **Answer: **
 
+# As illustrated by the
+# [scikit](http://scikit-learn.org/stable/modules/grid_search.html) function
+# `GridSearchCV`, the grid search techinque is a method that compute the best
+# hyperparameters among the cartesian product of the (restricted space of)
+# hyperparameters. More precisely, candidates for each dimension of
+# hyperparameters (in the example of decision tree, there is only one dimension
+# the max depth) are selected and then the grid search generate the cartesian
+# product of all the dimension of the hyperparameters, whose members are used to
+# compute a score. The element whose score is the best is then selected as the
+# best set of hyperparameters. This is useful for learning algorithm as it is
+# rather simple (and embarassingly parallel) algorithm to implement in order to
+# improve the prediction ability of learning models.
+
 # ### Question 8 - Cross-Validation
 #
 # * What is the k-fold cross-validation training technique?
@@ -193,26 +206,65 @@ vs.ModelComplexity(X_train, y_train)
 
 # **Answer: **
 
+# A model is usually assessed by its ability to predict new observations. With
+# this respect, a part of the original data set is put aside, the so-called
+# *test* set, is hidden to the model when its parameters are trained. When
+# using, grid search, we implicity use the test set as a part of the training
+# phase, as we compare the error of the different hyperparameters on the test
+# set, which goes against its definition. _k-fold_ cross validation is a
+# technique to prevent this: instead of splitting the original data set in two
+# unbalanced quanitity, we split the data into _k_ sets of approximatively the
+# same size, then _k-1_ sets are used to train the model and the generalisation
+# error is asssesd on the part of the last set. We repeat the process _k_ times
+# by selecting a different test set each time in order to get _k_ estimates of
+# the generalization error. A final estimate is given by taking the
+# average. This benefits grid search as it reduce the bias of the estimator
+# introduced by selecting a fix test set.
+
 # ### Implementation: Fitting a Model
-# Your final implementation requires that you bring everything together and train a model using the **decision tree algorithm**. To ensure that you are producing an optimized model, you will train the model using the grid search technique to optimize the `'max_depth'` parameter for the decision tree. The `'max_depth'` parameter can be thought of as how many questions the decision tree algorithm is allowed to ask about the data before making a prediction. Decision trees are part of a class of algorithms called *supervised learning algorithms*.
+# Your final implementation requires that you bring everything together and
+# train a model using the **decision tree algorithm**. To ensure that you are
+# producing an optimized model, you will train the model using the grid search
+# technique to optimize the `'max_depth'` parameter for the decision tree. The
+# `'max_depth'` parameter can be thought of as how many questions the decision
+# tree algorithm is allowed to ask about the data before making a
+# prediction. Decision trees are part of a class of algorithms called
+# *supervised learning algorithms*.
 #
-# In addition, you will find your implementation is using `ShuffleSplit()` for an alternative form of cross-validation (see the `'cv_sets'` variable). While it is not the K-Fold cross-validation technique you describe in **Question 8**, this type of cross-validation technique is just as useful!. The `ShuffleSplit()` implementation below will create 10 (`'n_splits'`) shuffled sets, and for each shuffle, 20% (`'test_size'`) of the data will be used as the *validation set*. While you're working on your implementation, think about the contrasts and similarities it has to the K-fold cross-validation technique.
+# In addition, you will find your implementation is using `ShuffleSplit()` for
+# an alternative form of cross-validation (see the `'cv_sets'` variable). While
+# it is not the K-Fold cross-validation technique you describe in **Question
+# 8**, this type of cross-validation technique is just as useful!. The
+# `ShuffleSplit()` implementation below will create 10 (`'n_splits'`) shuffled
+# sets, and for each shuffle, 20% (`'test_size'`) of the data will be used as
+# the *validation set*. While you're working on your implementation, think
+# about the contrasts and similarities it has to the K-fold cross-validation
+# technique.
 #
 # Please note that ShuffleSplit has different parameters in scikit-learn versions 0.17 and 0.18.
-# For the `fit_model` function in the code cell below, you will need to implement the following:
-# - Use [`DecisionTreeRegressor`](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html) from `sklearn.tree` to create a decision tree regressor object.
+# For the `fit_model` function in the code cell below, you will need to
+# implement the following:
+# - Use
+# - [`DecisionTreeRegressor`](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
+# - from `sklearn.tree` to create a decision tree regressor object.
 #   - Assign this object to the `'regressor'` variable.
-# - Create a dictionary for `'max_depth'` with the values from 1 to 10, and assign this to the `'params'` variable.
-# - Use [`make_scorer`](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html) from `sklearn.metrics` to create a scoring function object.
+# - Create a dictionary for `'max_depth'` with the values from 1 to 10, and
+# - assign this to the `'params'` variable.
+# - Use
+# - [`make_scorer`](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html)
+# - from `sklearn.metrics` to create a scoring function object.
 #   - Pass the `performance_metric` function as a parameter to the object.
 #   - Assign this scoring function to the `'scoring_fnc'` variable.
-# - Use [`GridSearchCV`](http://scikit-learn.org/0.17/modules/generated/sklearn.grid_search.GridSearchCV.html) from `sklearn.grid_search` to create a grid search object.
-#   - Pass the variables `'regressor'`, `'params'`, `'scoring_fnc'`, and `'cv_sets'` as parameters to the object.
-#   - Assign the `GridSearchCV` object to the `'grid'` variable.
+# - Use
+# - [`GridSearchCV`](http://scikit-learn.org/0.17/modules/generated/sklearn.grid_search.GridSearchCV.html)
+# - from `sklearn.grid_search` to create a grid search object.
+#   - Pass the variables `'regressor'`, `'params'`, `'scoring_fnc'`, and
+#   - `'cv_sets'` as parameters to the object.  Assign the `GridSearchCV`
+#   - object to the `'grid'` variable.
 
-# In[ ]:
-
-# TODO: Import 'make_scorer', 'DecisionTreeRegressor', and 'GridSearchCV'
+from sklearn.metrics import make_scorer
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.model_selection import GridSearchCV
 
 def fit_model(X, y):
     """ Performs grid search over the 'max_depth' parameter for a
@@ -221,21 +273,21 @@ def fit_model(X, y):
     # Create cross-validation sets from the training data
     # sklearn version 0.18: ShuffleSplit(n_splits=10, test_size=0.1, train_size=None, random_state=None)
     # sklearn versiin 0.17: ShuffleSplit(n, n_iter=10, test_size=0.1, train_size=None, random_state=None)
-    cv_sets = ShuffleSplit(X.shape[0], n_iter = 10, test_size = 0.20, random_state = 0)
+    cv_sets = ShuffleSplit(n_splits = 10, test_size = 0.20, random_state = 0)
 
     # TODO: Create a decision tree regressor object
-    regressor = None
+    regressor = DecisionTreeRegressor()
 
     # TODO: Create a dictionary for the parameter 'max_depth' with a range from 1 to 10
-    params = {}
+    params = {'max_depth': list(range(1, 11))}
 
     # TODO: Transform 'performance_metric' into a scoring function using 'make_scorer'
-    scoring_fnc = None
+    scoring_fnc = make_scorer(performance_metric)
 
     # TODO: Create the grid search cv object --> GridSearchCV()
     # Make sure to include the right parameters in the object:
     # (estimator, param_grid, scoring, cv) which have values 'regressor', 'params', 'scoring_fnc', and 'cv_sets' respectively.
-    grid = None
+    grid = GridSearchCV(regressor, param_grid=params, scoring=scoring_fnc, cv=cv_sets)
 
     # Fit the grid search object to the data to compute the optimal model
     grid = grid.fit(X, y)
@@ -245,13 +297,22 @@ def fit_model(X, y):
 
 
 # ### Making Predictions
-# Once a model has been trained on a given set of data, it can now be used to make predictions on new sets of input data. In the case of a *decision tree regressor*, the model has learned *what the best questions to ask about the input data are*, and can respond with a prediction for the **target variable**. You can use these predictions to gain information about data where the value of the target variable is unknown — such as data the model was not trained on.
+
+# Once a model has been trained on a given set of data, it can now be used to
+# make predictions on new sets of input data. In the case of a *decision tree
+# regressor*, the model has learned *what the best questions to ask about the
+# input data are*, and can respond with a prediction for the **target
+# variable**. You can use these predictions to gain information about data
+# where the value of the target variable is unknown — such as data the model
+# was not trained on.
 
 # ### Question 9 - Optimal Model
 #
-# * What maximum depth does the optimal model have? How does this result compare to your guess in **Question 6**?
+# * What maximum depth does the optimal model have? How does this result
+# * compare to your guess in **Question 6**?
 #
-# Run the code block below to fit the decision tree regressor to the training data and produce an optimal model.
+# Run the code block below to fit the decision tree regressor to the training
+# data and produce an optimal model.
 
 # In[ ]:
 
@@ -265,6 +326,7 @@ print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params
 # ** Hint: ** The answer comes from the output of the code snipped above.
 #
 # **Answer: **
+# Parameter 'max_depth' is 4 for the optimal model. As guessed in question 6, this was expected as the model with depth 4 had better prediction abilitiy (at the cost of more overfitting/variance).
 
 # ### Question 10 - Predicting Selling Prices
 # Imagine that you were a real estate agent in the Boston area looking to use this model to help price homes owned by your clients that they wish to sell. You have collected the following information from three of your clients:
@@ -278,11 +340,14 @@ print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params
 # * What price would you recommend each client sell his/her home at?
 # * Do these prices seem reasonable given the values for the respective features?
 #
-# **Hint:** Use the statistics you calculated in the **Data Exploration** section to help justify your response.  Of the three clients, client 3 has has the biggest house, in the best public school neighborhood with the lowest poverty level; while client 2 has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools.
+# **Hint:** Use the statistics you calculated in the **Data Exploration**
+# **section to help justify your response.  Of the three clients, client 3 has
+# **has the biggest house, in the best public school neighborhood with the
+# **lowest poverty level; while client 2 has the smallest house, in a
+# **neighborhood with a relatively high poverty rate and not the best public
+# **schools.
 #
 # Run the code block below to have your optimized model make predictions for each client's home.
-
-# In[ ]:
 
 # Produce a matrix for client data
 client_data = [[5, 17, 15], # Client 1
@@ -295,6 +360,17 @@ for i, price in enumerate(reg.predict(client_data)):
 
 
 # **Answer: **
+# The recommended prices are $403k for client 1, $237k for client 2 and $932k for
+# client 3. These prices seems reasonable with respect to the exploratory data
+# analysis. The third client posses a house in a well frequented neighbourhood
+# with low student-teacher ratio in nearby schools and low poverty level. Hence
+# it is expected that the price is near the maximum price. In contrast, client 2
+# has a house where the two aforementioned measure are much higher and seems to
+# illustrate a poor area. Client 1 has a price near the median/mean of the home
+# prices, hence it seems reasonable as a prediction.
+
+
+
 
 # ### Sensitivity
 # An optimal model is not necessarily a robust model. Sometimes, a model is either too complex or too simple to sufficiently generalize to new data. Sometimes, a model could use a learning algorithm that is not appropriate for the structure of the data given. Other times, the data itself could be too noisy or contain too few samples to allow a model to adequately capture the target variable — i.e., the model is underfitted.
@@ -311,13 +387,38 @@ vs.PredictTrials(features, prices, fit_model, client_data)
 # * In a few sentences, discuss whether the constructed model should or should not be used in a real-world setting.
 #
 # **Hint:** Take a look at the range in prices as calculated in the code snippet above. Some questions to answering:
-# - How relevant today is data that was collected from 1978? How important is inflation?
-# - Are the features present in the data sufficient to describe a home? Do you think factors like quality of apppliances in the home, square feet of the plot area, presence of pool or not etc should factor in?
+# - How relevant today is data that was collected from 1978? How important is
+# - inflation?
+# - Are the features present in the data sufficient to describe a home? Do you
+#  think factors like quality of apppliances in the home, square feet of the
+#  plot area, presence of pool or not etc should factor in?
 # - Is the model robust enough to make consistent predictions?
 # - Would data collected in an urban city like Boston be applicable in a rural city?
 # - Is it fair to judge the price of an individual home based on the characteristics of the entire neighborhood?
 
 # **Answer: **
+
+In a real world setting, the model should not be used as it is now specified.
+
+Inflation
+is clearly a big factor and it has been quite nonlinear in the past forty
+years. Maybe original prices could standardized, and then scaled back to actual
+prices with new measures, as the two features are still relevant today. Another
+reason to avoid using the data is the ignorance of the properties of the house
+itself: the size and type of the house, the quality of construction and size of
+the garden should be incorporated as they might have an impact on the price.
+
+Obviously, the model can predict prices in a similar environment to the data
+from which it was collected: we collected data from the city of Boston and the
+relationships between the dependent dimensions and the prices should remain,
+but the prices classification must vary depending the city or the
+region. Prices in New York should be higher, but in a rural city the features
+might have less impact than some other measures.
+
+Using characteristics external from the house to determine its prices is a fair
+practice, although one should definitively incorporate more specification of
+the house (a single room flat should be much cheaper than a twelve rooms
+mansion).
 
 # > **Note**: Once you have completed all of the code implementations and successfully answered each question above, you may finalize your work by exporting the iPython Notebook as an HTML document. You can do this by using the menu above and navigating to
 # **File -> Download as -> HTML (.html)**. Include the finished document along with this notebook as your submission.
