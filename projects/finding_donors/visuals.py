@@ -21,7 +21,7 @@ def distribution(data, transformed = False):
     """
     Visualization code for displaying skewed distributions of features
     """
-    
+
     # Create figure
     fig = pl.figure(figsize = (11,5));
 
@@ -51,34 +51,33 @@ def distribution(data, transformed = False):
 def evaluate(results, accuracy, f1):
     """
     Visualization code to display results of various learners.
-    
+
     inputs:
       - learners: a list of supervised learners
       - stats: a list of dictionaries of the statistic results from 'train_predict()'
       - accuracy: The score for the naive predictor
       - f1: The score for the naive predictor
     """
-  
+
     # Create figure
     fig, ax = pl.subplots(2, 3, figsize = (11,7))
 
     # Constants
     bar_width = 0.3
     colors = ['#A00000','#00A0A0','#00A000']
-    
+
     # Super loop to plot four panels of data
     for k, learner in enumerate(results.keys()):
         for j, metric in enumerate(['train_time', 'acc_train', 'f_train', 'pred_time', 'acc_test', 'f_test']):
             for i in np.arange(3):
-                print(metric, i, learner, k)
-                print(j/3, j%3)
                 # Creative plot code
-                ax[j/3, j%3].bar(i+k*bar_width, results[learner][i][metric], width = bar_width, color = colors[k])
-                ax[j/3, j%3].set_xticks([0.45, 1.45, 2.45])
-                ax[j/3, j%3].set_xticklabels(["1%", "10%", "100%"])
-                ax[j/3, j%3].set_xlabel("Training Set Size")
-                ax[j/3, j%3].set_xlim((-0.1, 3.0))
-    
+                jdx = int(j/3)
+                ax[jdx, j%3].bar(i+k*bar_width, results[learner][i][metric], width = bar_width, color = colors[k])
+                ax[jdx, j%3].set_xticks([0.45, 1.45, 2.45])
+                ax[jdx, j%3].set_xticklabels(["1%", "10%", "100%"])
+                ax[jdx, j%3].set_xlabel("Training Set Size")
+                ax[jdx, j%3].set_xlim((-0.1, 3.0))
+
     # Add unique y-labels
     ax[0, 0].set_ylabel("Time (in seconds)")
     ax[0, 1].set_ylabel("Accuracy Score")
@@ -86,7 +85,7 @@ def evaluate(results, accuracy, f1):
     ax[1, 0].set_ylabel("Time (in seconds)")
     ax[1, 1].set_ylabel("Accuracy Score")
     ax[1, 2].set_ylabel("F-score")
-    
+
     # Add titles
     ax[0, 0].set_title("Model Training")
     ax[0, 1].set_title("Accuracy Score on Training Subset")
