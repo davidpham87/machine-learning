@@ -100,10 +100,10 @@ def biplot(good_data, reduced_data, pca):
     '''
 
     fig, ax = plt.subplots(figsize = (14,8))
-    # scatterplot of the reduced data    
+    # scatterplot of the reduced data
     ax.scatter(x=reduced_data.loc[:, 'Dimension 1'], y=reduced_data.loc[:, 'Dimension 2'], 
         facecolors='b', edgecolors='b', s=70, alpha=0.5)
-    
+
     feature_vectors = pca.components_.T
 
     # we use scaling factors to make the arrows easier to see
@@ -120,7 +120,7 @@ def biplot(good_data, reduced_data, pca):
     ax.set_ylabel("Dimension 2", fontsize=14)
     ax.set_title("PC plane with original feature projections.", fontsize=16);
     return ax
-    
+
 
 def channel_results(reduced_data, outliers, pca_samples):
 	'''
@@ -132,14 +132,14 @@ def channel_results(reduced_data, outliers, pca_samples):
 	try:
 	    full_data = pd.read_csv("customers.csv")
 	except:
-	    print "Dataset could not be loaded. Is the file missing?"
+	    print("Dataset could not be loaded. Is the file missing?")
 	    return False
 
 	# Create the Channel DataFrame
 	channel = pd.DataFrame(full_data['Channel'], columns = ['Channel'])
 	channel = channel.drop(channel.index[outliers]).reset_index(drop = True)
 	labeled = pd.concat([reduced_data, channel], axis = 1)
-	
+
 	# Generate the cluster plot
 	fig, ax = plt.subplots(figsize = (14,8))
 
@@ -152,7 +152,7 @@ def channel_results(reduced_data, outliers, pca_samples):
 	for i, channel in grouped:   
 	    channel.plot(ax = ax, kind = 'scatter', x = 'Dimension 1', y = 'Dimension 2', \
 	                 color = cmap((i-1)*1.0/2), label = labels[i-1], s=30);
-	    
+
 	# Plot transformed sample points   
 	for i, sample in enumerate(pca_samples):
 		ax.scatter(x = sample[0], y = sample[1], \
