@@ -229,7 +229,7 @@ class Simulator(object):
 
             if a.learning:
                 f = self.table_file
-                
+
                 f.write("/-----------------------------------------\n")
                 f.write("| State-action rewards from Q-Learning\n")
                 f.write("\-----------------------------------------\n\n")
@@ -238,7 +238,7 @@ class Simulator(object):
                     f.write("{}\n".format(state))
                     for action, reward in a.Q[state].iteritems():
                         f.write(" -- {} : {:.2f}\n".format(action, reward))
-                    f.write("\n")  
+                    f.write("\n") 
                 self.table_file.close()
 
             self.log_file.close()
@@ -250,7 +250,7 @@ class Simulator(object):
             self.pygame.display.quit()  # shut down pygame
 
     def render_text(self, trial, testing=False):
-        """ This is the non-GUI render display of the simulation. 
+        """ This is the non-GUI render display of the simulation.
             Simulated trial data will be rendered in the terminal/command prompt. """
 
         status = self.env.step_data
@@ -282,7 +282,7 @@ class Simulator(object):
                     print "Agent attempted driving {} through traffic and cause a minor accident. (rewarded {:.2f})".format(status['action'], status['reward'])
                 elif status['violation'] == 4: # Major accident
                     print "Agent attempted driving {} through a red light with traffic and cause a major accident. (rewarded {:.2f})".format(status['action'], status['reward'])
-           
+
             # Time Remaining
             if self.env.enforce_deadline:
                 time = (status['deadline'] - 1) * 100.0 / (status['t'] + status['deadline'])
@@ -299,11 +299,11 @@ class Simulator(object):
             else:
                 print "Agent not set to learn."
 
-                
+
     def render(self, trial, testing=False):
         """ This is the GUI render display of the simulation. 
             Supplementary trial data can be found from render_text. """
-        
+
         # Reset the screen.
         self.screen.fill(self.bg_color)
 
@@ -312,7 +312,7 @@ class Simulator(object):
 
         # Boundary
         self.pygame.draw.rect(self.screen, self.boundary, ((self.env.bounds[0] - self.env.hang)*self.env.block_size, (self.env.bounds[1]-self.env.hang)*self.env.block_size, (self.env.bounds[2] + self.env.hang/3)*self.env.block_size, (self.env.bounds[3] - 1 + self.env.hang/3)*self.env.block_size), 4)
-        
+
         for road in self.env.roads:
             # Road
             self.pygame.draw.line(self.screen, self.road_color, (road[0][0] * self.env.block_size, road[0][1] * self.env.block_size), (road[1][0] * self.env.block_size, road[1][1] * self.env.block_size), self.road_width)
