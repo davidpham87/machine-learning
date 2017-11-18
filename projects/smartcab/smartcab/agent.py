@@ -97,6 +97,9 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
+        if not self.learning:
+            return None
+
         if state not in self.Q:
             self.Q[state] = {}.fromkeys(self.valid_actions, 0.0)
         return None
@@ -131,6 +134,8 @@ class LearningAgent(Agent):
             receives a reward. This function does not consider future rewards
             when conducting learning. """
 
+        if not self.learning:
+            return
         ########### 
         ## TO DO ##
         ###########

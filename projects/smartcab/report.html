@@ -13193,15 +13193,21 @@ code in agent.py should reflect the features chosen in this answer. </em></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I think all features should be included for learning safety and
+<p>I think all features but deadline should be included for learning safety and
 efficiency together.</p>
 <p>The reasoning is both measure compete with each other and the policy needs to
 find an optimal equilibrium between the two concepts. Safety needs the inputs
 (lights and surrounding cars) to determine if actions will lead to accidents or
 not, but it also need waypoint and deadline to decide which actions can actually
 lead them to destination.</p>
-<p>Waypoint is needed as it gives the direction to the agent for the shortest
-direction to destination.</p>
+<p>The inputs of other cars is necesary to respect the security of the passanger
+and to make the agent learn about american trafic laws. Waypoint is needed as it
+gives the direction to the agent for the shortest direction to destination.</p>
+<p>Deadline should not be accounted for as of now, because it would maybe bring a
+new dimension to the equlibrium about saftey and reliability: if we provide
+deadline to the agent, the agent might act recklessly and trade off security if
+deadline is near 0. (Another reason why not to include deadline is the size of
+the state space would increase a lot).</p>
 
 </div>
 </div>
@@ -13244,12 +13250,13 @@ of states!</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The state space is defined as the cartesian product of all possible state. In
-our case, waypoint has four values, lights has two states, each car in the
-inputs can have 4 values as well and deadline can is a positive integer (5 times
-the distance).</p>
+<p>The state space is defined as the cartesian product of all possible state
+without deadline. In our case, waypoint has four values, lights has two states,
+each car in the inputs can have 4 values as well. So basically, the state space
+has a size of $2^9$.</p>
 <p>No, it is probably impossible to cover the whole sample space (of size roughly
-$5 \cdot distance \cdot 2^9$).</p>
+$2^9$) because the environment creates the states randomnly (this is the
+collectioner problem in probability theory).</p>
 
 </div>
 </div>
@@ -16761,6 +16768,9 @@ agent started to exploit too soon.</li>
  <span class="o">--</span> <span class="bp">None</span> <span class="p">:</span> <span class="mf">1.40</span>
  <span class="o">--</span> <span class="n">left</span> <span class="p">:</span> <span class="o">-</span><span class="mf">4.55</span>
 </pre></div>
+<p>The agent might not have learn the optimal policy because it did not encounter
+these states often enough during the exploration phases, so it got stuck with
+suboptimal actions in the exploitation (and final) phases.</p>
 
 </div>
 </div>
@@ -16803,9 +16813,9 @@ figure out what they are and why future rewards won't work for this project?</em
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>My guess is that the policy is deterministic for the agent and as for the
-Environment each state have similar rewards as well, which might not help the
-smartcab to reach destination.</p>
+<p>We can discard the discounting of future rewards because the environment is
+highly stochastic and undefined and the agent can't see past the current
+intersection.</p>
 
 </div>
 </div>
