@@ -1,52 +1,98 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Joe Udacity  
-December 31st, 2050
+
+David Pham
+
+November 26th, 2017
 
 ## Proposal
-_(approx. 2-3 pages)_
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
 
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
+In recent years, deep learning showed its capacity to support art creation with
+neural style transfer. The idea is to copy the style from some image and to
+apply to the content of some other picture. Introduced by [Gatys et
+al.](https://arxiv.org/abs/1508.06576), the method has been improved by [Johnson
+et al.](http://cs.stanford.edu/people/jcjohns/eccv16/). [Instance
+normalization](https://arxiv.org/abs/1607.08022) appears to provide a
+significant speedup to the process. [Jing et
+al.](https://arxiv.org/abs/1705.04058) provides an overview of the domain as
+well.
+ 
+My motivation to study this and understand this topic is to combine my technical and artistic abilities together and also to provide some fun content easily to my friends.
 
 ### Problem Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+I would like to understand the original papers for neural style transfer and its
+improvements. The goal would be to create an stable and independent
+implementation of one of the concept and to easily apply the algorithm to
+different style images and to apply to any content image.
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+Creating a neural networks from scratch would take too many computational
+resources and the weights of Resnet-50 (from computer vision) are available and
+also used everywhere to compute a good representation for pictures. 
+
+Inputs would jpeg pictures. Style would be typically from famous paints or maybe
+some standard natural environment (beaches, forest, etc.). We would download
+pictures from either internet or use some standard dataset (cifar100 or imagenet).
+
+Content picture will either be persons (when applied with an artistic style) or
+other environment (when applied to other environmental scenes).
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+We will implement in tensorflow a part of
+[fast-neural-style](https://github.com/jcjohnson/fast-neural-style) repository.
+
+Neural style transfer is a technique that uses deep neural networks to learn
+representations of pictures and part of theses representation can be used to
+describe either the style or the content of a picture. The goal of this project
+is to provide a good summary of Neural Style Transfer, with the fast forward
+version as well as for instance normalization.
+
+Moreover, we will provide a package that should apply style to a content picture
+in a reasonable amount of time (under 10 seconds for a 600x600 image.) I hope
+our model should be at least able to attain 10% of the state of the art
+implementations.
 
 ### Benchmark Model
-_(approximately 1-2 paragraphs)_
 
-In this section, provide the details for a benchmark model or result that relates to the domain, problem statement, and intended solution. Ideally, the benchmark model or result contextualizes existing methods or known information in the domain and problem given, which could then be objectively compared to the solution. Describe how the benchmark model or result is measurable (can be measured by some metric and clearly observed) with thorough detail.
+Models are provided in this repository
+[fast-neural-style](https://github.com/jcjohnson/fast-neural-style) and in the
+[keras
+example](https://github.com/fchollet/keras/blob/master/examples/neural_style_transfer.py).
+An implementation in tensorflow is provided here by
+[Lengstrom](https://github.com/lengstrom/fast-style-transfer).
+
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
 
-In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
+My metric will be the speed of my program to apply style to content. I will try
+to measure its distribution and benchmark my model and should run under 10s for
+most low resolution pictures. 
 
 ### Project Design
-_(approx. 1 page)_
 
-In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+First part will be to understand the underlying concept behind Neural Style
+Transfer and its improvements. Then it will be to collect the data. Then, a part
+of the code will devoted to handle data (pictures): resizing them, moving them
+around and also caching the style to avoid recomputing their representation
+uselessly. As described above, fast neural style transfer is probably the main
+algorithm to be implemented with the trick of instance normalization.
 
------------
+A part of the project will be determine how to extract the hidden representation
+of the pictures and to implement efficiently the combining operations of these
+extracts. As I do not have GPU on my laptop, AWS instances will have to be set
+and run jupyter notebooks from there.
 
-**Before submitting your proposal, ask yourself. . .**
+Obviously, the project will be implemented in Tensorflow, although a PyTorch
+implementation also seems really attractive.
 
-- Does the proposal you have written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
+Finally, a simple interface should be created so that the user could provide the
+paths of images which could be used for content and style and these could be
+used for creating new and fun pictures.
+
+All in all, this is an engineering problem, where the solution uses deep
+learning to create new artistic content. 
