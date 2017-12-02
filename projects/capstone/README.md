@@ -2,18 +2,13 @@
 ## Specializations
 ## Project: Capstone Proposal and Capstone Project
 
-**Note**
+# Data acquisition 
 
-The Capstone is a two-staged project. The first is the proposal component, where
-you can receive valuable feedback about your project idea, design, and proposed
-solution. This must be completed prior to your implementation and submitting for
-the capstone project.
+The data set is stored in [quandl](https://www.quandl.com/data/WIKI-Wiki-EOD-Stock-Prices/documentation/database-overview). 
 
-You can find the [capstone proposal rubric
-here](https://review.udacity.com/#!/rubrics/410/view), and the [capstone project
-rubric here](https://review.udacity.com/#!/rubrics/108/view). Please ensure that
-you are following directions correctly before submitting these two stages which
-encapsulate your capstone.
+Please use the following line to download the data.
 
-Please email [machine-support@udacity.com](mailto:machine-support@udacity.com)
-if you have any questions.
+```shell
+API_KEY = $(YOUR API KEY FOR QUANDL)
+wget https://www.quandl.com/api/v3/datatables/WIKI/PRICES?qopts.export=true&api_key=$API_KEY
+```
