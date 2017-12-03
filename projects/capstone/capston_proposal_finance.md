@@ -141,28 +141,44 @@ word embedding. Please, read the problem statement for more details.
 
 ### Benchmark Model
 
-We will use the correlation matrix and [Hierarchial
-clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering), also see
+Obviously, as we try to create clusters, a base model could be random guessing.
+
+Another more sophisticated baseline would be to use the correlation matrix and
+[Hierarchial clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering),
+also see
 [scikit](http://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering),
-is a good benchmark model with maximum distance between groups as linkage
-criteria.
+to create a graph of clusters with the maximum distance between groups as
+linkage criteria by using the absolute value of the element of the correlation
+matrix as a proxy for a metric distance. The algorithm would start with a graph
+with no edges and would gather groups only if their correlation is high. 
 
 ### Evaluation Metrics
 
 We will use the [silhouette
 score](https://en.wikipedia.org/wiki/Silhouette_(clustering)) as evaluation
-metrics. The silhouette score measures how appropriately the data have been clustered.  
+metrics. The silhouette score measures how appropriately the data have been clustered.
+
+As for the vector representation of the financial assets, we would use the
+accuracy of our classifiers. As the classifiers tries to predict the nearest
+neighbors when using the standardized relative daily performance. A good
+representation should be attained when our classifiers have good performance.
 
 ### Project Design
 
-First part will be to download and understanding the data. A module should be
-written to record all the transformations and make it reproducible. Then data
-will be cached to avoid doing the same computation over and over.
+On an abstract level, the project would be designed as follow. Data will be
+acquired and the necessary transformation will be performed. From this point,
+the benchmark models will be studied in order to get some intuition, then the
+models creating the vector representations will be implemented. This last step
+should be the main challenge of the project as many possibilities exists to find
+a good model. The analysis and diagnostic of results should then be conducted,
+hopefully with data visualizations.
 
-A second step would be implemented the benchmark model to set our expectations.
-Then, we would implemented the neural network (in keras and tensorflow).
-Tensorboard should be then used to inspect the embeddings and we should try to
-make exports in csv and maybe to polish the visualizations.. 
-
-Finally, we should try several hyper parameters to observe any difference,
-report the differences.
+On a more detailed view, we would follow the following steps. The first part is
+to download and understanding the data. A python module should probably be
+written to record all the transformations and make it reproducible. Then data is
+cached to avoid doing the same computation repeatedly . Then the benchmark model
+is implemented to set our expectations. Then, we will create the neural network
+(in keras and tensorflow). Tensorboard should be then used to inspect the
+embeddings and we should try to make exports in csv and maybe to polish the
+visualizations. Finally, we should try several hyper parameters to observe any
+difference and report them.

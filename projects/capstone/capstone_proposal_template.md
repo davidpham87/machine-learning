@@ -19,7 +19,9 @@ significant speedup to the process. [Jing et
 al.](https://arxiv.org/abs/1705.04058) provides an overview of the domain as
 well.
  
-My motivation to study this and understand this topic is to combine my technical and artistic abilities together and also to provide some fun content easily to my friends.
+My motivation to study this and understand this topic is to combine my technical
+and artistic abilities together and also to provide some fun content easily to
+my friends.
 
 ### Problem Statement
 
