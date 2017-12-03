@@ -53,7 +53,7 @@ new investment strategies, but also about data control quality.
 Dependency discovery and correlation cluster is a common problem. See [Liu et
 al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3477851/) with their [youtube
 video](https://www.youtube.com/watch?v=wtd3K-Ubr1g), [Stackoverflow
-discussionf(https://stackoverflow.com/questions/2907919/hierarchical-clustering-on-correlations-in-python-scipy-numpy),
+discussion](https://stackoverflow.com/questions/2907919/hierarchical-clustering-on-correlations-in-python-scipy-numpy),
 [Statsoverflow
 discussion](https://stats.stackexchange.com/questions/138325/clustering-a-correlation-matrix).
 [Copula theory](https://en.wikipedia.org/wiki/Copula_(probability_theory)) is
