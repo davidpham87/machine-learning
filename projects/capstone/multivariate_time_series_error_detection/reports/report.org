@@ -1,0 +1,14 @@
+#+TITLE: Multivariate Time Series Error Detection
+#+AUTHOR: David Pham
+#+EMAIL: davidpham87@gmail.com
+
+* Data
+
+  Downloaded on /2018-08-21/: 
+  - Price: https://www.quandl.com/databases/WIKIP/documentation/about
+  - Company information: https://simfin.com/data/find/
+
+
+* Introduction
+
+* Exploratory Analysis
