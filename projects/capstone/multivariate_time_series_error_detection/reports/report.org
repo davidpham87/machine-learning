@@ -4,11 +4,15 @@
 
 * Data
 
-  Downloaded on /2018-08-21/: 
-  - Price: https://www.quandl.com/databases/WIKIP/documentation/about
-  - Company information: https://simfin.com/data/find/
+The below table shows the data and how to access them.
 
+| Type                | Provider | Access to Datatest | Downloaded |
+|---------------------+----------+--------------------+------------|
+| Price               | [[https://www.quandl.com/databases/WIKIP/documentation/about][Quandl]]   | [[https://www.quandl.com/databases/WIKIP][Quandl API]]         | 2018-08-21 |
+| Company information | [[https://simfin.com/data/find/][SimFin]]   | [[https://s3.us-east-2.amazonaws.com/udacity-capstone-data-davidpham87/data/company_fundamentals.csv][S3]]                 | 2018-08-21 |
+|---------------------+----------+--------------------+------------|
 
 * Introduction
+ 
 
 * Exploratory Analysis

@@ -1,6 +1,8 @@
-# import quandl
-# quandl.ApiConfig.api_key = "GMRJ3WPfaDvbxReufnku"
-# data = quandl.get_table('WIKI/PRICES', paginate=True)
+
+
+import quandl
+quandl.ApiConfig.api_key = "GMRJ3WPfaDvbxReufnku"
+data = quandl.get_table('WIKI/PRICES', paginate=True)
 
 import pandas as pd
 
