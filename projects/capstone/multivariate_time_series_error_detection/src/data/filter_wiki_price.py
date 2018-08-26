@@ -162,7 +162,7 @@ if __name__ == '__main__':
     print("Filtering the sectors")
     data_returns_top_sector = keep_top_sectors(remap_sectors(data_returns))
     print("Creating the indices")
-    data_indices_returns, data_indices_level = index_construction(data_returns)
+    data_indices_returns, data_indices_level = index_construction(data_returns_top_sector)
 
     print("Saving data")
     print("Saving stock returns")
