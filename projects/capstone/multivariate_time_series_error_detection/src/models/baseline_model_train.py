@@ -1,9 +1,10 @@
 import numpy as np
 import pandas as pd
 import sklearn as sk
-from sklearn.metrics import silouhette_score
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
+
+import multiprocessing as mp
 
 def split_companies_train_dev_test(companies):
     "Return train, dev, test set for companies"
@@ -37,11 +38,15 @@ indices = pd.read_csv('../../data/processed/wiki_indices_returns.csv', index_col
 drop_column = lambda df,i=0: df.drop(df.columns[i], axis=1)
 
 stocks = drop_column(stocks)
-stocks = stocks.drop('name')
+stocks = stocks.drop('name', axis=1)
 stocks = stocks.dropna()
 
+companies = stocks.groupby('ticker').first().reset_index()
+sectors_counts = companies.sector.value_counts()
+sectors_proportions = sectors_counts/sectors_counts.sum()
+sectors_unique = sectors_counts.index.tolist()
+
 stocks = stocks.set_index('ticker')
-stocks_data = {k: filter_stocks(stocks, v.ticker) for k, v in companies_data.items()}
 
 indices_ts = df_to_ts(indices[['date'] + sectors_unique])
 stocks_ts = df_to_ts(stocks.reset_index())
@@ -50,16 +55,10 @@ stocks_all = pd.merge(stocks_ts, indices_ts, 'left')
 stocks_all = stocks_all.dropna() # loss of 200 000 observations
 stocks_all = stocks_all.drop('sector', axis=1)
 stocks_all = stocks_all.groupby('ticker').apply(df_to_ts)
-stocks_all = stocks_all.drop(['ticker', 'date'], axis=1)
+stocks_all = stocks_all.drop(['ticker', 'date', 'sector'], axis=1)
 
 # Baseline model
 # mean values
-
-companies = stocks.groupby('ticker').first().reset_index()
-
-sectors_counts = companies.sector.value_counts()
-sectors_proportions = sectors_counts/sectors_counts.sum()
-sectors_unique = sectors_counts.index.tolist()
 
 label_encoder = preprocessing.LabelEncoder()
 label_encoder.fit(sectors_counts.index.tolist())
@@ -71,15 +70,18 @@ biggest_sector = sectors_proportions.argmax()
 print("Most representated class:", biggest_sector, ', with proportion of ', round(100*max_proportion_baseline, 2), '%.')
 # Accuracy of our models should be better than max_proportion_baseline.
 
-# Second baseline, take the most similar class
-stocks_all.set_index('ticker')
-
-
 companies_data = {}
 data_split = split_companies_train_dev_test(companies)
 for i, k in enumerate(['train', 'dev', 'test']):
     companies_data[k] = data_split[i]
+stocks_data = {k: filter_stocks(stocks_all, v.ticker) for k, v in companies_data.items()}
 
-
+df = stocks_data['train'].loc['AAPL']
 ## Create 2 months period so around 21*2=42 dataframes so the 42x17
+window_size = 42
+idx = np.random.randint(0, df.shape[0]-window_size)
+df[idx:idx+window_size]
+
+
+
 
