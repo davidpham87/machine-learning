@@ -63,3 +63,7 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# Tensorflow logs and keras weights
+logs/
+checkpoint/

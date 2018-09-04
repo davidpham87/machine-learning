@@ -1,0 +1,186 @@
+[I 09:12:33.033 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[I 09:12:36.674 NotebookApp] Serving notebooks from local directory: /home/ubuntu/machine-learning/projects/capstone
+[I 09:12:36.674 NotebookApp] The Jupyter Notebook is running at:
+[I 09:12:36.674 NotebookApp] https://(ip-172-31-23-37 or 127.0.0.1):8888/
+[I 09:12:36.674 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 09:12:44.402 NotebookApp] 302 GET / (31.164.92.131) 0.68ms
+[I 09:12:44.524 NotebookApp] 302 GET /tree? (31.164.92.131) 0.76ms
+[I 09:12:50.149 NotebookApp] 302 POST /login?next=%2Ftree%3F (31.164.92.131) 1.06ms
+[I 09:13:09.743 NotebookApp] Kernel started: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:13:11.292 NotebookApp] Adapting to protocol v5.1 for kernel c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:15:10.637 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:15:16.179 NotebookApp] New terminal with automatic name: 1
+2018-09-02 09:15:36.416211: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-09-02 09:15:37.978132: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:895] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-09-02 09:15:37.978465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:1e.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-09-02 09:15:37.978488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:17:10.612 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:18:34.489 NotebookApp] Kernel started: 048f68cb-c5aa-4755-a6af-77518561f7a0
+[I 09:18:35.444 NotebookApp] Adapting to protocol v5.1 for kernel 048f68cb-c5aa-4755-a6af-77518561f7a0
+2018-09-02 09:18:44.944089: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-09-02 09:18:45.022563: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:895] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-09-02 09:18:45.022865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:1e.0
+totalMemory: 11.17GiB freeMemory: 7.66GiB
+2018-09-02 09:18:45.022887: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:18:59.372 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:19:03.368 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:19:10.665 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:19:27.877 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:20:10.854 NotebookApp] Kernel started: 37143798-1782-4455-b922-e3ee14c61052
+[I 09:20:11.905 NotebookApp] Adapting to protocol v5.1 for kernel 37143798-1782-4455-b922-e3ee14c61052
+[I 09:20:38.697 NotebookApp] Adapting to protocol v5.1 for kernel c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+2018-09-02 09:21:22.424075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:22:38.614 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:23:59.399 NotebookApp] Adapting to protocol v5.1 for kernel c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:25:58.739 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:27:23.893 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:29:39.418 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:29:58.770 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+2018-09-02 09:30:22.623751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:31:58.746 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:32:11.130 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+2018-09-02 09:32:39.170492: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-09-02 09:32:39.352321: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:895] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-09-02 09:32:39.352659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:1e.0
+totalMemory: 11.17GiB freeMemory: 4.13GiB
+2018-09-02 09:32:39.352693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+2018-09-02 09:33:26.241310: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:33:58.747 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:34:11.115 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:34:34.754 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:34:50.653 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:35:49.830 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:35:58.750 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:36:02.312 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:36:11.157 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+2018-09-02 09:36:23.187048: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:36:34.746 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:37:28.558 NotebookApp] Kernel interrupted: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:37:28.763 NotebookApp] Kernel interrupted: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:37:29.015 NotebookApp] Kernel interrupted: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+ERROR:tornado.general:Uncaught exception in ZMQStream callback
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/ipykernel/kernelbase.py", line 283, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/usr/local/lib/python3.5/dist-packages/ipykernel/kernelbase.py", line 233, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/usr/local/lib/python3.5/dist-packages/ipykernel/kernelbase.py", line 421, in execute_request
+    self._abort_queues()
+  File "/usr/local/lib/python3.5/dist-packages/ipykernel/kernelbase.py", line 636, in _abort_queues
+    self._abort_queue(stream)
+  File "/usr/local/lib/python3.5/dist-packages/ipykernel/kernelbase.py", line 661, in _abort_queue
+    poller.poll(50)
+  File "/usr/local/lib/python3.5/dist-packages/zmq/sugar/poll.py", line 99, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+  File "zmq/backend/cython/_poll.pyx", line 123, in zmq.backend.cython._poll.zmq_poll
+  File "zmq/backend/cython/checkrc.pxd", line 12, in zmq.backend.cython.checkrc._check_rc
+KeyboardInterrupt
+[I 09:37:30.695 NotebookApp] Kernel interrupted: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:37:33.649 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel c6e3874a-af61-4e14-96cc-3bd97e45bf3b restarted
+WARNING:root:kernel c6e3874a-af61-4e14-96cc-3bd97e45bf3b restarted
+WARNING:root:kernel c6e3874a-af61-4e14-96cc-3bd97e45bf3b restarted
+[I 09:37:49.338 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:37:54.033 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:37:58.994 NotebookApp] Kernel restarted: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:38:00.991 NotebookApp] Adapting to protocol v5.1 for kernel c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+2018-09-02 09:38:04.285481: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-09-02 09:38:04.516324: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:895] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-09-02 09:38:04.516659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:1e.0
+totalMemory: 11.17GiB freeMemory: 4.13GiB
+2018-09-02 09:38:04.516695: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:38:11.127 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:38:34.753 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+2018-09-02 09:39:03.166920: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:39:58.792 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:40:11.114 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:40:34.753 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:40:45.018 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:40:48.227 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+2018-09-02 09:41:45.268356: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0, compute capability: 3.7)
+[I 09:41:58.746 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:42:10.792 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:42:11.408 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:42:17.434 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:42:19.774 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:42:34.774 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:43:58.762 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:44:11.115 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:44:34.778 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:45:58.763 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:46:11.155 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:46:34.755 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:47:58.773 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:48:11.130 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:48:34.750 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:49:58.765 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:50:11.117 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:50:34.755 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:51:58.760 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:52:11.117 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:52:34.782 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:53:58.766 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:54:11.115 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:54:34.787 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:55:45.226 NotebookApp] Kernel interrupted: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:55:52.948 NotebookApp] Kernel interrupted: c6e3874a-af61-4e14-96cc-3bd97e45bf3b
+[I 09:55:59.284 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:56:11.113 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:56:34.776 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:57:58.753 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 09:58:11.125 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 09:58:34.775 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 09:59:58.781 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:00:11.142 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:00:34.807 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:01:58.788 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:02:11.121 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:02:34.761 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:03:58.787 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:04:11.131 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:04:34.761 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:05:58.775 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:06:11.122 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:06:34.807 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:07:58.797 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:08:11.128 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:08:34.779 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:09:19.423 NotebookApp] New terminal with automatic name: 2
+[I 10:09:38.085 NotebookApp] New terminal with automatic name: 3
+[I 10:09:58.792 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:10:11.168 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:10:34.770 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:11:58.801 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:12:11.143 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:12:34.778 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:13:58.778 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:14:11.137 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:14:34.758 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:15:58.786 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:16:11.136 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:16:34.757 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:17:58.753 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:18:11.121 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:18:34.789 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:19:58.765 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:20:11.136 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:20:34.796 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:21:58.765 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:22:11.115 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:22:34.751 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
+[I 10:23:58.811 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training.ipynb
+[I 10:24:11.112 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_bis.ipynb
+[I 10:24:34.753 NotebookApp] Saving file at /multivariate_time_series_error_detection/notebooks/02-dph-model-training_third.ipynb
