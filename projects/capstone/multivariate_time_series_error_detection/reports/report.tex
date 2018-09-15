@@ -1,4 +1,4 @@
-% Created 2018-09-15 Sam 11:05
+% Created 2018-09-15 Sam 11:17
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,twoside]{article}
 \usepackage[utf8]{inputenc}
@@ -21,10 +21,10 @@
 \usepackage{pdflscape}
 \author{David Pham}
 \date{\today}
-\title{Multivariate Time Series Error Detection}
+\title{Multivariate Time Series Classification and Embedding}
 \hypersetup{
  pdfauthor={David Pham},
- pdftitle={Multivariate Time Series Error Detection},
+ pdftitle={Multivariate Time Series Classification and Embedding},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 25.2.1 (Org mode 9.1.7)}, 
@@ -34,9 +34,10 @@
 \maketitle
 \tableofcontents
 
+\#startup: showall
 
 \section{Project overview}
-\label{sec:org49f5cc4}
+\label{sec:orgb64b546}
 
 In the financial investment industry, the speed and the quality of processing
 information is what determines if a business is successful or failure. In the
@@ -51,7 +52,7 @@ correlation and study the hidden layer of the network. The projects uses data
 from Quandl and SimFin.
 
 \section{Problem Statement}
-\label{sec:orgbb3d104}
+\label{sec:orge03247f}
 
 The goal of this project is to create a method to embed financial time series
 into a vector space and analyze qualitatively the embedding. The main
@@ -68,7 +69,7 @@ sources.
 
 
 \section{Metrics}
-\label{sec:org4beb1d4}
+\label{sec:orga864785}
 
 We will use the \emph{accuracy} defined as the ratio between the true positive and
 negatives predictions divided by the dataset size. Or in formula
@@ -83,7 +84,7 @@ companies.
 
 
 \section{Data}
-\label{sec:org2b16581}
+\label{sec:org1f892c8}
 
 The below table shows the data and how to access them.
 
@@ -107,7 +108,7 @@ Standard (GICS). We could find the sectors of \emph{726} companies which
 constituted our dataset. The prices range from 1962 to 2018.
 
 \section{Exploratory Analysis}
-\label{sec:org271634d}
+\label{sec:org38a1245}
 
 In Figure \ref{fig:distribution-sectors} and \ref{fig:gics-level}, one can
 observe that number of stocks per sectors and the synthetic indices created by
@@ -135,7 +136,7 @@ downward pikes which coincide with the bubble dot-com and the financial crisis.
 \end{figure}
 
 \section{Algorithms and Technique and}
-\label{sec:org68d454b}
+\label{sec:org39dc0fc}
 
 There is two classifiers. One is algorithmic and the is other one is based on
 a dense neural network using the right transformation of the input to
@@ -170,7 +171,7 @@ set, sampled a 3 months (63 days) of observation of the companies' stock
 returns along with the returns of the sector indices.
 
 \section{Benchmark}
-\label{sec:org789fa4d}
+\label{sec:orgf060307}
 
 Intuitively, we could use random guessing as a benchmark (this would yield a
 13\% accuracy at best as Financial Services is the biggest represented class).
@@ -180,10 +181,10 @@ classifier gets an accuracy rates of 59\%.
 
 
 \section{Methodology}
-\label{sec:org028bbfd}
+\label{sec:org8336ba7}
 
 \subsection{Data processing}
-\label{sec:orga6824d6}
+\label{sec:org34e4d70}
 
 From the Quandl dataset, the prepossessing involves keeping only the ticker
 and the close price for as many date as possible and as many companies as
@@ -199,7 +200,7 @@ unlikely that a indices of stocks lose or gain more than 5\% in a single
 trading day and the 100 level was set for 1990-01-01.
 
 \subsection{Implementation}
-\label{sec:org529cc81}
+\label{sec:orgbae949e}
 
 The integrity of the code follows a linear process in the \texttt{notebook} folder
 of the project. One should be able to run all the code in each notebook
@@ -224,7 +225,7 @@ training, each sector was sampled with equal probability and a random
 company was then selected from the sector.
 
 \section{Refinement}
-\label{sec:org4d037f0}
+\label{sec:org7f8f4d9}
 
 The implementation has been performed with a simple function defining the
 network. We ran several experiment of the network, using convolutional
@@ -244,7 +245,7 @@ linear transformation.
 
 
 \subsection{Structure of the network}
-\label{sec:orgf5864a6}
+\label{sec:orgcc626c2}
 
 The network is depicted in Figure \ref{fig:keras-nn}. From the input data,
 three transformation are performed. The first one create product of
@@ -265,7 +266,7 @@ embedding from which we extract the classes.
 \end{figure}
 
 \section{Results}
-\label{sec:org7898ae1}
+\label{sec:org52c600f}
 
 The base model using only correlation for the period of 3 months achieves
 \(59%\) accuracy in training and test set. This rather rule based method is
@@ -275,7 +276,7 @@ As for neural network model, it achieves around \(58\%\) percent accuracy on a
 single observation of three months which is on par with our benchmark.
 However, when we provide 25 random samples of 3 months period to the
 classifier, the classifier achieves \(80\%\) accuracy. As it can be read in
-Table \ref{tab:orgef0f799}.
+Table \ref{tab:org70e9be4}.
 
 \begin{landscape}
   \begin{figure}    
@@ -293,7 +294,7 @@ exception of \emph{Chemicals} and \emph{Manufacturing - Apparels and Furniture}.
 reason are probably that are little data.
 
 \begin{longtable}{|l|rrrr|}
-\caption{\label{tab:orgef0f799}
+\caption{\label{tab:org70e9be4}
 Confusion Report from the neural network classifier with resampled data.}
 \\
 \hline
@@ -334,7 +335,7 @@ avg / total & 0.79 & 0.82 & 0.80 & 73\\
 
 
 \section{Embedding}
-\label{sec:orgfb77745}
+\label{sec:orgd37413a}
 
 We are curious to look at the embedding produce by our neural network. We use
 t-SNE to create a low dimensional representation of it. This technique
@@ -378,7 +379,7 @@ and the Insurance sector are grouped tightly making them quite distinct group.
 
 
 \section{Conclusion and Further applications}
-\label{sec:org888f928}
+\label{sec:org57b47c5}
 
 The first lesson I learned is data preparation and acquisition is much harder
 than thought and we should thank the machine learning community for providing
