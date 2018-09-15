@@ -1,0 +1,769 @@
+ticker	sector
+EXC	Utilities
+ORLY	Retail - Apparel & Specialty
+KHC	Consumer Packaged Goods
+MLAB	Technology
+SIG	Retail - Apparel & Specialty
+TDC	Technology
+MDLZ	Consumer Packaged Goods
+CIT	Financial Services
+LNT	Utilities
+IART	Medical
+IBKC	Financial Services
+SIGM	Technology
+SHLO	Industrial Products
+SWKS	Technology
+SHLD	Retail - Apparel & Specialty
+CPT	REITs
+CHK	Oil and Gas
+CMS	Utilities
+MHK	Manufacturing - Apparel & Furniture
+AOS	Industrial Products
+GME	Retail - Apparel & Specialty
+NE	Oil and Gas
+HRC	Medical
+CMCSA	Communication Services
+CAVM	Technology
+PRLB	Industrial Products
+AVY	Industrial Products
+NICK	Financial Services
+AMD	Technology
+DVN	Oil and Gas
+CHSP	REITs
+RSYS	Technology
+CPN	Utilities
+PVH	Manufacturing - Apparel & Furniture
+TIS	Consumer Packaged Goods
+NBL	Oil and Gas
+JPM	Financial Services
+EOG	Oil and Gas
+MTRX	Oil and Gas
+LFUS	Technology
+CBK	Retail - Apparel & Specialty
+PPG	Chemicals
+SLG	REITs
+HPE	Communication Equipment
+INTC	Technology
+DNB	Business Services
+ABMD	Medical
+BSET	Manufacturing - Apparel & Furniture
+KTWO	Medical
+AXP	Financial Services
+DSW	Retail - Apparel & Specialty
+SNX	Business Services
+JBL	Technology
+C	Financial Services
+MYL	Drug Manufacturers
+SRDX	Medical
+HPQ	Technology
+POST	Consumer Packaged Goods
+FET	Oil and Gas
+WAL	Financial Services
+NTAP	Technology
+AIV	REITs
+ATO	Utilities
+TSS	Financial Services
+BCPC	Chemicals
+TMO	Medical
+AMAT	Technology
+AGO	Insurance
+AGN	Drug Manufacturers
+ITW	Industrial Products
+WLTW	Financial Services
+SHOR	Communication Equipment
+HBI	Manufacturing - Apparel & Furniture
+GPN	Business Services
+FIS	Business Services
+BDX	Medical
+MASI	Medical
+UVE	Insurance
+HAYN	Industrial Products
+NKSH	Financial Services
+PBH	Medical
+WAT	Medical
+EVC	Entertainment
+LII	Industrial Products
+ECL	Chemicals
+CPB	Consumer Packaged Goods
+LYV	Entertainment
+NXST	Entertainment
+NTGR	Communication Equipment
+GGP	REITs
+TMK	Insurance
+TSCO	Retail - Apparel & Specialty
+ITG	Financial Services
+CE	Chemicals
+ZBH	Medical
+TR	Consumer Packaged Goods
+BHGE	Oil and Gas
+BKE	Retail - Apparel & Specialty
+DLR	REITs
+ARNC	Industrial Products
+CCI	Communication Services
+AKRX	Drug Manufacturers
+XCO	Oil and Gas
+ATW	Oil and Gas
+RSPP	Oil and Gas
+ALL	Insurance
+FTI	Oil and Gas
+ORI	Insurance
+HSIC	Medical
+AMKR	Technology
+BRS	Oil and Gas
+MCK	Medical
+UMBF	Financial Services
+DXCM	Medical
+MCO	Financial Services
+PODD	Medical
+EGY	Oil and Gas
+TECD	Technology
+CONN	Retail - Apparel & Specialty
+HAL	Oil and Gas
+MOV	Retail - Apparel & Specialty
+VOYA	Financial Services
+CBOE	Financial Services
+KEY	Financial Services
+COTY	Consumer Packaged Goods
+MXIM	Technology
+CCOI	Communication Services
+PPL	Utilities
+CLNE	Oil and Gas
+MRCY	Technology
+CMTL	Communication Equipment
+MMS	Business Services
+ESGR	Insurance
+HP	Oil and Gas
+HIBB	Retail - Apparel & Specialty
+FOE	Chemicals
+SHW	Chemicals
+RL	Manufacturing - Apparel & Furniture
+TWX	Entertainment
+ABBV	Drug Manufacturers
+SNA	Industrial Products
+LION	Financial Services
+CROX	Manufacturing - Apparel & Furniture
+CRZO	Oil and Gas
+DDD	Technology
+WU	Financial Services
+IDT	Communication Services
+HFC	Oil and Gas
+MET	Insurance
+MEIP	Drug Manufacturers
+APA	Oil and Gas
+MA	Financial Services
+ARRS	Communication Equipment
+AAPL	Technology
+AVP	Consumer Packaged Goods
+EBF	Industrial Products
+P	Entertainment
+ARE	REITs
+COO	Medical
+CUZ	REITs
+KMI	Oil and Gas
+HD	Retail - Apparel & Specialty
+DXLG	Retail - Apparel & Specialty
+KSS	Retail - Apparel & Specialty
+TDW	Oil and Gas
+BG	Consumer Packaged Goods
+CMA	Financial Services
+VZ	Communication Services
+ZUMZ	Retail - Apparel & Specialty
+SBGI	Entertainment
+PBF	Oil and Gas
+CXO	Oil and Gas
+CMI	Industrial Products
+NEE	Utilities
+WIFI	Communication Services
+NWS	Entertainment
+HRL	Consumer Packaged Goods
+AYI	Technology
+SPGI	Financial Services
+WGL	Utilities
+PSA	REITs
+ALX	REITs
+EIX	Utilities
+ACLS	Technology
+ASH	Chemicals
+FDS	Financial Services
+PAYX	Business Services
+HIL	Business Services
+NJR	Utilities
+ADP	Business Services
+MTB	Financial Services
+VRA	Manufacturing - Apparel & Furniture
+USB	Financial Services
+AMG	Financial Services
+AON	Financial Services
+LRCX	Technology
+LYB	Chemicals
+REV	Consumer Packaged Goods
+LZB	Manufacturing - Apparel & Furniture
+SHO	REITs
+WR	Utilities
+HUN	Chemicals
+BBY	Retail - Apparel & Specialty
+NTRS	Financial Services
+LABL	Business Services
+AMSC	Technology
+APC	Oil and Gas
+VLO	Oil and Gas
+OXM	Manufacturing - Apparel & Furniture
+EL	Consumer Packaged Goods
+FOX	Entertainment
+MDT	Medical
+VNCE	Manufacturing - Apparel & Furniture
+PSX	Oil and Gas
+ETM	Entertainment
+MU	Technology
+FNSR	Communication Equipment
+HRTG	Insurance
+ZTS	Drug Manufacturers
+MRO	Oil and Gas
+RDC	Oil and Gas
+CREE	Technology
+FORR	Business Services
+RF	Financial Services
+ARI	REITs
+EMN	Chemicals
+ASNA	Retail - Apparel & Specialty
+CME	Financial Services
+ARW	Technology
+ACET	Drug Manufacturers
+TIF	Retail - Apparel & Specialty
+LEG	Manufacturing - Apparel & Furniture
+ESS	REITs
+HOLX	Medical
+SCHW	Financial Services
+PHH	Financial Services
+SXT	Chemicals
+NPTN	Technology
+OXFD	Medical
+LAZ	Financial Services
+EXPR	Retail - Apparel & Specialty
+VNTV	Business Services
+MIND	Technology
+CB	Insurance
+EQT	Oil and Gas
+AFL	Insurance
+AVNW	Communication Equipment
+ACC	REITs
+STI	Financial Services
+MBFI	Financial Services
+OSTK	Retail - Apparel & Specialty
+GEOS	Oil and Gas
+MSCI	Financial Services
+AIG	Insurance
+RECN	Business Services
+PACB	Medical
+CLCT	Business Services
+AEE	Utilities
+GPS	Retail - Apparel & Specialty
+PKI	Medical
+LQDT	Retail - Apparel & Specialty
+TGNA	Entertainment
+ABT	Medical
+ONVO	Medical
+ROK	Industrial Products
+PXD	Oil and Gas
+PFE	Drug Manufacturers
+BOFI	Financial Services
+FNB	Financial Services
+BSX	Medical
+CTL	Communication Services
+GPC	Retail - Apparel & Specialty
+AAP	Retail - Apparel & Specialty
+AMCX	Entertainment
+BBT	Financial Services
+XEL	Utilities
+THS	Consumer Packaged Goods
+APD	Chemicals
+ICUI	Medical
+COLM	Manufacturing - Apparel & Furniture
+CSII	Medical
+TWIN	Industrial Products
+TESS	Communication Equipment
+KWR	Chemicals
+ADS	Financial Services
+RGC	Entertainment
+DOV	Industrial Products
+WHR	Manufacturing - Apparel & Furniture
+LB	Retail - Apparel & Specialty
+VIAB	Entertainment
+ALGN	Medical
+MTD	Medical
+GXP	Utilities
+LANC	Consumer Packaged Goods
+OXY	Oil and Gas
+GIII	Manufacturing - Apparel & Furniture
+TPX	Manufacturing - Apparel & Furniture
+EFX	Business Services
+REN	Oil and Gas
+NUTR	Consumer Packaged Goods
+CBB	Communication Services
+TXN	Technology
+NFG	Oil and Gas
+NAVI	Financial Services
+FITB	Financial Services
+PLAB	Technology
+CINF	Insurance
+GE	Industrial Products
+DFS	Financial Services
+RGA	Insurance
+DTE	Utilities
+ACRX	Medical
+ALR	Medical
+WTR	Utilities
+HK	Oil and Gas
+GRA	Chemicals
+UBNT	Communication Equipment
+OKE	Oil and Gas
+PTEN	Oil and Gas
+CIDM	Entertainment
+LCI	Drug Manufacturers
+BAH	Business Services
+IBOC	Financial Services
+NATR	Consumer Packaged Goods
+MRK	Drug Manufacturers
+DGX	Medical
+JKHY	Business Services
+AEO	Retail - Apparel & Specialty
+EXR	REITs
+TTC	Industrial Products
+BRO	Financial Services
+PH	Industrial Products
+BBBY	Retail - Apparel & Specialty
+AGNC	REITs
+ENDP	Drug Manufacturers
+JNPR	Communication Equipment
+DWDP	Chemicals
+CSS	Retail - Apparel & Specialty
+L	Insurance
+AVB	REITs
+KLAC	Technology
+HES	Oil and Gas
+RIG	Oil and Gas
+FCEL	Utilities
+CFG	Financial Services
+BHE	Technology
+CIM	REITs
+ES	Utilities
+ABC	Medical
+CBSH	Financial Services
+APH	Technology
+ALE	Utilities
+PYPL	Financial Services
+EEFT	Business Services
+TMUS	Communication Services
+FBHS	Manufacturing - Apparel & Furniture
+SNI	Entertainment
+STAR	REITs
+ALEX	REITs
+ITRI	Technology
+ATI	Industrial Products
+LPLA	Financial Services
+DRQ	Oil and Gas
+AMTD	Financial Services
+BBGI	Entertainment
+CAG	Consumer Packaged Goods
+AZZ	Industrial Products
+TWMC	Retail - Apparel & Specialty
+AZO	Retail - Apparel & Specialty
+BGCP	Financial Services
+AMZN	Retail - Apparel & Specialty
+BXP	REITs
+LVLT	Communication Services
+ERIE	Financial Services
+HURC	Technology
+CHTR	Communication Services
+EQR	REITs
+HNI	Industrial Products
+JNJ	Drug Manufacturers
+GCO	Retail - Apparel & Specialty
+BK	Financial Services
+LCUT	Manufacturing - Apparel & Furniture
+SWN	Oil and Gas
+BABY	Medical
+ULTA	Retail - Apparel & Specialty
+LNC	Insurance
+FUL	Chemicals
+LUK	Consumer Packaged Goods
+NFX	Oil and Gas
+ACCO	Industrial Products
+HELE	Consumer Packaged Goods
+HI	Industrial Products
+CL	Consumer Packaged Goods
+GSIT	Technology
+LNG	Oil and Gas
+JWN	Retail - Apparel & Specialty
+OCN	Financial Services
+PDCO	Medical
+TRMB	Technology
+BGS	Consumer Packaged Goods
+PHX	Oil and Gas
+INGR	Consumer Packaged Goods
+MSI	Communication Equipment
+AES	Utilities
+HBAN	Financial Services
+CCF	Industrial Products
+QEP	Oil and Gas
+TESO	Oil and Gas
+A	Medical
+SSI	Retail - Apparel & Specialty
+VRSK	Business Services
+WDC	Technology
+SGA	Entertainment
+ED	Utilities
+DRE	REITs
+MEI	Technology
+TROX	Chemicals
+BAX	Medical
+TEL	Technology
+NVEC	Technology
+URBN	Retail - Apparel & Specialty
+BKH	Utilities
+CASS	Business Services
+VAR	Medical
+RPM	Chemicals
+NRG	Utilities
+GIS	Consumer Packaged Goods
+TSN	Consumer Packaged Goods
+MNK	Drug Manufacturers
+ENS	Technology
+KIRK	Retail - Apparel & Specialty
+OZRK	Financial Services
+WIN	Communication Services
+SBAC	Communication Services
+EPR	REITs
+COR	REITs
+WPX	Oil and Gas
+SUPN	Drug Manufacturers
+SWX	Utilities
+MPWR	Technology
+ANDV	Oil and Gas
+TTMI	Technology
+RRC	Oil and Gas
+JCP	Retail - Apparel & Specialty
+COHR	Technology
+ROP	Industrial Products
+PNW	Utilities
+LE	Retail - Apparel & Specialty
+PPC	Consumer Packaged Goods
+CRUS	Technology
+SAFT	Insurance
+KMB	Consumer Packaged Goods
+ICE	Financial Services
+PFG	Insurance
+NKE	Manufacturing - Apparel & Furniture
+SWK	Industrial Products
+AIZ	Insurance
+NRZ	REITs
+DOW	Chemicals
+CPST	Industrial Products
+ARCW	Industrial Products
+MKL	Insurance
+SYF	Financial Services
+BID	Retail - Apparel & Specialty
+XCRA	Technology
+DHR	Medical
+FTR	Communication Services
+BEN	Financial Services
+CRR	Oil and Gas
+INT	Oil and Gas
+AEIS	Technology
+BR	Business Services
+HST	REITs
+IRM	Business Services
+CAH	Medical
+GLW	Technology
+NFLX	Entertainment
+HCP	REITs
+WINA	Retail - Apparel & Specialty
+MKTX	Financial Services
+HOMB	Financial Services
+CNA	Insurance
+VNO	REITs
+K	Consumer Packaged Goods
+ISBC	Financial Services
+GPRE	Chemicals
+WEC	Utilities
+IR	Industrial Products
+AOSL	Technology
+ATU	Industrial Products
+NWL	Consumer Packaged Goods
+VFC	Manufacturing - Apparel & Furniture
+SMTC	Technology
+DISCA	Entertainment
+CDR	REITs
+OSIS	Technology
+PCG	Utilities
+GRC	Industrial Products
+SANM	Technology
+O	REITs
+AAMC	Financial Services
+ETR	Utilities
+MPC	Oil and Gas
+TROW	Financial Services
+FCNCA	Financial Services
+ISRG	Medical
+RMD	Medical
+AKR	REITs
+GEO	REITs
+FLS	Industrial Products
+ANF	Retail - Apparel & Specialty
+VMI	Industrial Products
+TNDM	Medical
+ABAX	Medical
+TXMD	Drug Manufacturers
+SPLS	Retail - Apparel & Specialty
+AVGO	Technology
+ODP	Retail - Apparel & Specialty
+GOOD	REITs
+BLK	Financial Services
+VTR	REITs
+MRC	Oil and Gas
+SAFM	Consumer Packaged Goods
+AWK	Utilities
+HIG	Insurance
+NUVA	Medical
+BCR	Medical
+XYL	Industrial Products
+SCSC	Technology
+SJM	Consumer Packaged Goods
+SYK	Medical
+PGR	Insurance
+EMR	Industrial Products
+PIR	Retail - Apparel & Specialty
+NOV	Oil and Gas
+DLX	Business Services
+WSTL	Communication Equipment
+HCN	REITs
+BCOR	Financial Services
+FL	Manufacturing - Apparel & Furniture
+KORS	Manufacturing - Apparel & Furniture
+ACGL	Insurance
+NWY	Retail - Apparel & Specialty
+KIM	REITs
+CUBE	REITs
+FELE	Industrial Products
+VRX	Drug Manufacturers
+M	Retail - Apparel & Specialty
+EW	Medical
+OPY	Financial Services
+WFC	Financial Services
+SSP	Entertainment
+BIO	Medical
+RAVN	Industrial Products
+CIEN	Communication Equipment
+XOM	Oil and Gas
+HCOM	Communication Services
+ADES	Industrial Products
+CBS	Entertainment
+D	Utilities
+IRBT	Technology
+KRC	REITs
+COH	Retail - Apparel & Specialty
+SRE	Utilities
+MDR	Oil and Gas
+CALL	Communication Services
+NVDA	Technology
+LBTYA	Communication Services
+XRAY	Medical
+PX	Chemicals
+SJI	Utilities
+AHL	Insurance
+QCOM	Technology
+FLO	Consumer Packaged Goods
+CFR	Financial Services
+CNP	Utilities
+SKX	Manufacturing - Apparel & Furniture
+BHF	Insurance
+ELS	REITs
+IDA	Utilities
+CLR	Oil and Gas
+MKSI	Technology
+SNHY	Industrial Products
+UTMD	Medical
+BGG	Industrial Products
+WRI	REITs
+LL	Retail - Apparel & Specialty
+S	Communication Services
+ENR	Technology
+EV	Financial Services
+EQIX	REITs
+UPL	Oil and Gas
+REXR	REITs
+EWBC	Financial Services
+CHD	Consumer Packaged Goods
+HOME	Retail - Apparel & Specialty
+IVAC	Technology
+AAOI	Technology
+PBI	Industrial Products
+DFT	REITs
+WWE	Entertainment
+STT	Financial Services
+V	Financial Services
+SMCI	Communication Equipment
+MRVL	Technology
+CAMP	Communication Equipment
+FSLR	Technology
+TRV	Insurance
+SEIC	Financial Services
+HRS	Communication Equipment
+MS	Financial Services
+MTSI	Technology
+MUR	Oil and Gas
+ABM	Business Services
+FRAN	Retail - Apparel & Specialty
+ALB	Chemicals
+WHG	Financial Services
+IHC	Insurance
+IPXL	Drug Manufacturers
+CETV	Entertainment
+AMBA	Technology
+AMT	Communication Services
+CR	Industrial Products
+CBL	REITs
+MSCC	Technology
+HON	Industrial Products
+XLNX	Technology
+SCG	Utilities
+PKE	Technology
+CPE	Oil and Gas
+SNAK	Consumer Packaged Goods
+HMTV	Communication Services
+NDSN	Industrial Products
+KEM	Technology
+PRGO	Drug Manufacturers
+BONT	Retail - Apparel & Specialty
+ENZ	Medical
+SLB	Oil and Gas
+NI	Utilities
+SPG	REITs
+LAMR	REITs
+DLB	Entertainment
+RDNT	Medical
+FOSL	Manufacturing - Apparel & Furniture
+KAR	Retail - Apparel & Specialty
+OII	Oil and Gas
+HSY	Consumer Packaged Goods
+HURN	Business Services
+AEP	Utilities
+PRU	Insurance
+BRCD	Technology
+CSCO	Communication Equipment
+FISV	Business Services
+ARAY	Medical
+CRL	Medical
+PNR	Industrial Products
+FLXS	Manufacturing - Apparel & Furniture
+PLD	REITs
+CMLS	Entertainment
+COP	Oil and Gas
+TFSL	Financial Services
+GIMO	Communication Equipment
+SHLM	Chemicals
+UNM	Insurance
+ILMN	Medical
+CLX	Consumer Packaged Goods
+WSM	Retail - Apparel & Specialty
+AMP	Financial Services
+IVZ	Financial Services
+SNH	REITs
+HTH	Financial Services
+DEST	Retail - Apparel & Specialty
+FTV	Technology
+STBA	Financial Services
+HCSG	Business Services
+KMG	Chemicals
+ETFC	Financial Services
+FLIR	Technology
+MDXG	Medical
+SMRT	Retail - Apparel & Specialty
+LLY	Drug Manufacturers
+TJX	Retail - Apparel & Specialty
+TRGP	Oil and Gas
+MMC	Financial Services
+XEC	Oil and Gas
+PACW	Financial Services
+CVX	Oil and Gas
+SO	Utilities
+BOKF	Financial Services
+VR	Insurance
+SALM	Entertainment
+PBCT	Financial Services
+SLM	Financial Services
+COG	Oil and Gas
+FE	Utilities
+OHI	REITs
+ZION	Financial Services
+AMWD	Manufacturing - Apparel & Furniture
+EXTR	Communication Equipment
+INFN	Communication Equipment
+WLK	Chemicals
+SIRI	Entertainment
+SGY	Oil and Gas
+AJG	Financial Services
+BFS	REITs
+MKC	Consumer Packaged Goods
+ADM	Consumer Packaged Goods
+EBAY	Retail - Apparel & Specialty
+GTN	Entertainment
+BAC	Financial Services
+IDCC	Communication Services
+IPGP	Technology
+DKS	Retail - Apparel & Specialty
+GS	Financial Services
+Y	Insurance
+BMI	Technology
+STX	Technology
+OGS	Utilities
+GGG	Industrial Products
+SSNI	Technology
+EPM	Oil and Gas
+AE	Oil and Gas
+COF	Financial Services
+PG	Consumer Packaged Goods
+NWE	Utilities
+EXAS	Medical
+G	Business Services
+FMC	Chemicals
+LM	Financial Services
+RES	Oil and Gas
+GRMN	Technology
+GPT	REITs
+T	Communication Services
+SCVL	Retail - Apparel & Specialty
+GES	Retail - Apparel & Specialty
+WMB	Oil and Gas
+NDAQ	Financial Services
+OMI	Medical
+ADI	Technology
+LSI	REITs
+CIE	Oil and Gas
+ETN	Industrial Products
+DIS	Entertainment
+FRT	REITs
+BRKS	Technology
+MMM	Industrial Products
+DCI	Industrial Products
+ROST	Retail - Apparel & Specialty
+AFG	Insurance
+MCHP	Technology
+INFO	Business Services
+GMED	Medical
+PRXL	Medical
+DUK	Utilities
+BMY	Drug Manufacturers
+AME	Industrial Products
+HLF	Consumer Packaged Goods
+PNC	Financial Services
+IFF	Chemicals
+PAHC	Drug Manufacturers
+UA	Manufacturing - Apparel & Furniture
+PEB	REITs
+SQBG	Manufacturing - Apparel & Furniture
+LH	Medical
+SIGI	Insurance
+CTAS	Business Services
+TFX	Medical
+FLWS	Retail - Apparel & Specialty
