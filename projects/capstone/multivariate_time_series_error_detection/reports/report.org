@@ -14,7 +14,7 @@
 * Project overview
 
 In the financial investment industry, the speed and the quality of processing
-information is what determines if a business is sucessful or failure. In the
+information is what determines if a business is successful or failure. In the
 recent period, an emphasis has been set on machine learning algorithms for
 investment strategies. One common application is the statement of the algorithms
 to perform classification of companies to put them into sector.
@@ -34,7 +34,7 @@ from Quandl and SimFin.
   1. Filter the universe of the data and acquire the data from different
      sources.
   2. Transform data to be usable in machine learning algorithm.
-  3. Create artifical data to transform the problem into a supervised learning problem.
+  3. Create artificial data to transform the problem into a supervised learning problem.
   4. Create a base model and train an advanced classifier to create the embedding.
   5. Analyze briefly the embedding.
 
@@ -46,7 +46,7 @@ from Quandl and SimFin.
 
 #+BEGIN_EXPORT latex
 \begin{align*}
-  \textrm{accuracy} = \frac{\textrm{true positives} + \textrm{true negatives}}{\textrm{sample size}}
+  \textrm{accuracy} = \frac{\textsc{number of correct classification} }{\textsc{sample size}}
 \end{align*}
 #+END_EXPORT
 
@@ -63,8 +63,8 @@ The below table shows the data and how to access them.
 |---------------------+-----------+--------------------+------------|
 | Price               | [[https://www.quandl.com/databases/WIKIP/documentation/about][Quandl]]    | [[https://www.quandl.com/databases/WIKIP][Quandl API]]         | 2018-08-21 |
 | Company information | [[https://simfin.com/data/find/][SimFin]]    | [[https://s3.us-east-2.amazonaws.com/udacity-capstone-data-davidpham87/data/company_fundamentals.csv][S3]]                 | 2018-08-21 |
-| Stocks Returns      | Processed | [[https://s3.us-east-2.amazonaws.com/udacity-capstone-data-davidpham87/data/wiki_indices_returns.csv][S3]]                 | 2018-09-11 |
-| Index Returns       | Processed | [[https://s3.us-east-2.amazonaws.com/udacity-capstone-data-davidpham87/data/wiki_stocks_returns.csv][S3]]                 | 2018-09-11 |
+| Stocks Returns      | Processed | [[https://s3.us-east-2.amazonaws.com/udacity-capstone-data-davidpham87/data/wiki_stocks_returns.csv][S3]]                 | 2018-09-11 |
+| Index Returns       | Processed | [[https://s3.us-east-2.amazonaws.com/udacity-capstone-data-davidpham87/data/wiki_indices_returns.csv][S3]]                 | 2018-09-11 |
 |---------------------+-----------+--------------------+------------|
 
 In our analysis, we used the closed price of the US companies provided by
@@ -75,6 +75,15 @@ Standard (GICS). We could find the sectors of \emph{726} companies which
 constituted our dataset. The prices range from 1962 to 2018.
 
 * Exploratory Analysis
+
+In Figure \ref{fig:distribution-sectors} and \ref{fig:gics-level}, one can
+observe that number of stocks per sectors and the synthetic indices created by
+aggregating the returns.
+
+We observe that financial services, technology and oil and gas are the most
+prominent sectors. At first glance, the indices seems to be behave according to
+our intuition to the economic situation from the last decades. We see clear two
+downward pikes which coincide with the bubble dot-com and the financial crisis.
 
 #+BEGIN_EXPORT latex
 \begin{figure}    
@@ -91,7 +100,7 @@ constituted our dataset. The prices range from 1962 to 2018.
 \begin{center}
   \label{fig:gics-level}
   \includegraphics[width=0.95\textwidth]{figures/indexes_level}
-  \caption{Synthetic indeces of sectors according to GICS. Index are set on 100 on the 1990-01-01.}
+  \caption{Synthetic indices of sectors according to GICS. Index are set on 100 on the 1990-01-01.}
   \end{center}
 \end{figure}
 #+END_EXPORT
@@ -100,17 +109,17 @@ constituted our dataset. The prices range from 1962 to 2018.
 
   There is two classifiers. One is algorithmic and the is other one is based on
   a dense neural network using the right transformation of the input to
-  incorporate non linear reliationship between the weights.
+  incorporate non linear relationship between the weights.
 
-  The first classifier computes correlations of timeseries and then assign to an
-  input timeseries the /sector/ with which it has the highest correlation. 
+  The first classifier computes correlations of time-series and then assign to an
+  input time-series the /sector/ with which it has the highest correlation. 
 
   For two random variables $X$ and $Y$, with sufficient stability assumption, the
   Pearson correlation is defined as
 
   #+BEGIN_EXPORT latex
   \begin{align*}
-    \rho_p(X, Y) = E[XY] - E[X]E[Y] \approx \sum_{i=1}^n x_iy_i - \sum_{i=1}^nx_i\sum_{i=1}^n y_i,
+    \rho_p(X, Y) = E[XY] - (E[X]E[Y])^2 \approx \sum_{i=1}^n x_iy_i - \Big(\sum_{i=1}^nx_i\sum_{i=1}^n y_i\Big)^2,
   \end{align*}
   #+END_EXPORT
 
@@ -128,9 +137,9 @@ constituted our dataset. The prices range from 1962 to 2018.
 
   Concerning the input of the model, the data was split into training, dev, and
   test set using with 80%, 10%, 10% of the overall data set. In the training
-  phase, each instance of a batch we sampled randomly a companie of the training
-  set, sampled a 3 months (63 days) of observation of the companie's stock
-  returns along with the returns of the sectorial indices.
+  phase, each instance of a batch we sampled randomly a companies of the training
+  set, sampled a 3 months (63 days) of observation of the companies' stock
+  returns along with the returns of the sector indices.
 
 * Benchmark
 
@@ -143,7 +152,7 @@ constituted our dataset. The prices range from 1962 to 2018.
 
 * Methodology
 
-** Data preprocessing
+** Data processing
 
    From the Quandl dataset, the prepossessing involves keeping only the ticker
    and the close price for as many date as possible and as many companies as
@@ -164,7 +173,7 @@ constituted our dataset. The prices range from 1962 to 2018.
    of the project. One should be able to run all the code in each notebook
    separately. It was considered to have a proper implementation in the project
    and to avoid code duplication, but under time constraint, copy paste solution
-   were prefered. That being said, the code has been written using pure python
+   were preferred. That being said, the code has been written using pure python
    functions to avoid spaghetti code.
 
    The implementation using Tensorflow and the keras API linked in the library.
@@ -173,32 +182,32 @@ constituted our dataset. The prices range from 1962 to 2018.
    The exact implementation can be found in the notebooks.
    
    We launched AWS server with spot instance and launched a jupyter server there
-   and made it accessible to our webbrowser. We develop code also in the
-   terminal with emacs to adapt some code. 
+   and made it accessible to our web-browser. We develop code also in the
+   terminal with Emacs to adapt some code. 
 
    The first step was to download the data from the several providers and to
    process them. Then we needed to use several classes from keras to support
    asynchronous loading of the data thanks to the =Sequence= object. During
    training, each sector was sampled with equal probability and a random
-   companie was then selected from the sector.
+   company was then selected from the sector.
 
 * Refinement 
 
   The implementation has been performed with a simple function defining the
-   network. We ran several experiment of the network, using adapation of
-   inception units and residual units, known in the neural network for images,
-   but they did not lead to any improvement of the model. Moreover, to avoid
-   overfitting, we added several batch normalization layers as well as gaussian
-   noise layer with a really small standard deviation. A few layers in the
-   network were penalized $L_2$ regularization to insure that the features
-   stayed as independent as possible.
+  network. We ran several experiment of the network, using convolutional
+  networks, with adaptation of inception units and residual units, known in the
+  neural network for images, but they did not lead to any improvement of the
+  model. Moreover, to avoid overfitting, we added several batch normalization
+  layers as well as Gaussian noise layer with a really small standard deviation.
+  A few layers in the network were penalized $L_2$ regularization to insure that
+  the features stayed as independent as possible.
 
-   The best models were the ones which were fed with correlations and forwarded
-   to into a denses networks. The reason is associative measure a non linear and
-   it is not common to multiply inputs with each other. That being said, we
-   managed to create a convolutional layer that achieved an accuracy rate of
-   55%, a bit short from our best model and from the benchmark, but using only
-   linear transformation.
+  The best models were the ones which were fed with correlations and forwarded
+  to into a dense networks. The reason is associative measure a non linear and
+  it is not common to multiply inputs with each other. That being said, we
+  managed to create a convolutional layer that achieved an accuracy rate of
+  55%, a bit short from our best model and from the benchmark, but using only
+  linear transformation.
 
    
 ** Structure of the network
@@ -292,7 +301,7 @@ constituted our dataset. The prices range from 1962 to 2018.
   In Figure \ref{fig:tsne-embedding}, it can be observed that stocks from the
   same sector tends to be near each other. The distinct cluster are finance and
   technology, which are also the most represented in our dataset. The model
-  seems to have difficulty to differentiate somes chemical companies as their
+  seems to have difficulty to differentiate some chemical companies as their
   embedding seems to be close to some industrial production companies. In
   general, the more companies we had in the raw dataset the more precise the
   groups are.
@@ -311,16 +320,16 @@ constituted our dataset. The prices range from 1962 to 2018.
     \begin{center}
       \label{fig:silhouette-score}
       \includegraphics[height=\textheight]{./figures/silouhette_score}
-      \caption{Silouhette score of the average embedding of the stocks}
+      \caption{Silhouette score of the average embedding of the stocks}
       \end{center}
     \end{figure}
   \end{landscape}
   #+END_EXPORT
 
-  In Figure \ref{fig:silhouette-score}, the silouhette score is depicted for the
+  In Figure \ref{fig:silhouette-score}, the silhouette score is depicted for the
   several sectors in our dataset. The first observation is we see the advantage
   of a neural network classifier over k-means clustering, because the silhouette
-  score overweights the mislabeled sample of financial and technology, which are
+  score over-weights the mislabeled sample of financial and technology, which are
   the most precise sectors. Otherwise we can observe that REiTS, Oil and Gas,
   and the Insurance sector are grouped tightly making them quite distinct group.
 
@@ -342,15 +351,15 @@ constituted our dataset. The prices range from 1962 to 2018.
   typical machine learning application domain.
 
   The primary goal of the project was to find method that could create embedding
-  for financial timeseries and Figure \ref{fig:tsne-embedding} provides a good
+  for financial time series and Figure \ref{fig:tsne-embedding} provides a good
   proof that this goal has been reached. Our clustering abilities are still
   lacking as the accuracy rate for sample of three months is yet not better than
   a simple correlation measure. But the method has a higher accuracy when
   sampled with more data. 
 
   As for the improvement, we could try different architecture (LSTM and several
-  skip convoluation). The LSTM models could allow flexible time input. Moreover
-  it would have been interesting to apply som semi-unsupervised method to
+  skip convolution). The LSTM models could allow flexible time input. Moreover
+  it would have been interesting to apply some semi-unsupervised method to
   improve the model and embedding. We could have applied our existing predictor
   for stocks whose sector is missing and recompute the indices and maybe retrain
   the classifier. A really interesting step would have been to incorporate T-SNE
