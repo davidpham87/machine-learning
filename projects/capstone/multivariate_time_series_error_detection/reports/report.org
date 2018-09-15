@@ -1,4 +1,4 @@
-#startup: showall
+#+start: showall
 #+TITLE: Multivariate Time Series Classification and Embedding
 #+AUTHOR: David Pham
 #+EMAIL: davidpham87@gmail.com

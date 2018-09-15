@@ -1,4 +1,4 @@
-Multivariate Time Series Error Detection
+Multivariate Time Series Classification and Embedding
 ==============================
 
 Application of machine learning algorithm to simplify error time series data
