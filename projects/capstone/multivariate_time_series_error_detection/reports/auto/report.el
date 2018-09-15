@@ -5,12 +5,12 @@
                      '(("article" "a4paper" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("inputenc" "utf8") ("fontenc" "T1") ("ulem" "normalem") ("geometry" "margin=3.5cm") ("hyperref" "colorlinks")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
@@ -33,23 +33,27 @@
     "geometry"
     "pdflscape")
    (LaTeX-add-labels
-    "sec:orgb24a6b5"
-    "sec:orgb711bc6"
-    "sec:org7a915c3"
-    "sec:org7896a9a"
-    "sec:orgbb7eeb8"
+    "sec:orgc8da660"
+    "sec:org01d0b7f"
+    "sec:orgab986c4"
+    "sec:org81b92f9"
+    "sec:org822fc2e"
+    "fig:distribution-sectors"
+    "fig:gics-level"
+    "sec:orgd0f2fb2"
+    "sec:orgee61770"
+    "sec:orgdb3cd2d"
+    "sec:org3a39f6d"
+    "sec:org0b799ed"
+    "sec:orgeb514e6"
+    "sec:org89a789b"
     "fig:keras-nn"
-    "sec:orga558eb8"
-    "sec:org6bf7dbd"
-    "sec:org06293d3"
-    "sec:org90ba10c"
-    "sec:org8dd4226"
-    "sec:org68e9b17"
+    "sec:orgbd084ae"
     "fig:confusion-matrix"
-    "tab:orgab64cd9"
-    "sec:org4c7ebc6"
+    "tab:org5b707ed"
+    "sec:orgc85a26b"
     "fig:tsne-embedding"
     "fig:silhouette-score"
-    "sec:orgc4d755f"))
+    "sec:org2ffb474"))
  :latex)
 

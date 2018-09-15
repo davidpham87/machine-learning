@@ -96,7 +96,7 @@ constituted our dataset. The prices range from 1962 to 2018.
 \end{figure}
 #+END_EXPORT
 
-* Algorithms and Technique and Benchmark
+* Algorithms and Technique and 
 
   There is two classifiers. One is algorithmic and the is other one is based on
   a dense neural network using the right transformation of the input to
@@ -114,9 +114,6 @@ constituted our dataset. The prices range from 1962 to 2018.
   \end{align*}
   #+END_EXPORT
 
-  Using the correlation as measure of association and using the sector with the
-  highest correlation to our input series, the classifier gets a accuracy rates
-  of 59%.
 
   The second classifier use a deep neural network to create features and
   representation (or state) of the inputs to be able to separate linearly all
@@ -134,6 +131,15 @@ constituted our dataset. The prices range from 1962 to 2018.
   phase, each instance of a batch we sampled randomly a companie of the training
   set, sampled a 3 months (63 days) of observation of the companie's stock
   returns along with the returns of the sectorial indices.
+
+* Benchmark
+
+  Intuitively, we could use random guessing as a benchmark (this would yield a
+  13% accuracy at best as Financial Services is the biggest represented class).
+  A bit more challenging, we could use correlation as measure of association and
+  using the sector with the highest correlation to our input series, This
+  classifier gets an accuracy rates of 59%.
+
 
 * Methodology
 
@@ -207,13 +213,15 @@ constituted our dataset. The prices range from 1962 to 2018.
    embedding from which we extract the classes.
  
    #+BEGIN_EXPORT latex
+
     \begin{figure}    
     \begin{center}
       \label{fig:keras-nn}
-      \includegraphics[height=0.95\textheight]{./figures/model_keras}
+      \includegraphics[width=\textwidth]{./figures/model_keras}
       \caption{Neural Network structure}
       \end{center}
     \end{figure}
+
     #+END_EXPORT
 
 * Results
