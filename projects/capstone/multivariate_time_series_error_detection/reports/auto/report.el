@@ -4,7 +4,7 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "a4paper" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("inputenc" "utf8") ("fontenc" "T1") ("ulem" "normalem") ("geometry" "margin=3.5cm") ("hyperref" "colorlinks")))
+                     '(("inputenc" "utf8") ("fontenc" "T1") ("ulem" "normalem") ("geometry" "margin=3.5cm")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
@@ -33,27 +33,29 @@
     "geometry"
     "pdflscape")
    (LaTeX-add-labels
-    "sec:orgb64b546"
-    "sec:orge03247f"
-    "sec:orga864785"
-    "sec:org1f892c8"
-    "sec:org38a1245"
+    "sec:org59cffe4"
+    "sec:org46a4ecf"
+    "sec:orgda57672"
+    "sec:orge8906e6"
+    "sec:org89bc8d0"
     "fig:distribution-sectors"
     "fig:gics-level"
-    "sec:org39dc0fc"
-    "sec:orgf060307"
-    "sec:org8336ba7"
-    "sec:org34e4d70"
-    "sec:orgbae949e"
-    "sec:org7f8f4d9"
-    "sec:orgcc626c2"
+    "sec:org90358cc"
+    "sec:org9548d7c"
+    "sec:orgdf4002a"
+    "sec:orge16cd46"
+    "sec:org6549843"
+    "sec:org73b2063"
+    "sec:orgf675192"
     "fig:keras-nn"
-    "sec:org52c600f"
+    "sec:orgd2caaf1"
     "fig:confusion-matrix"
-    "tab:org70e9be4"
-    "sec:orgd37413a"
-    "fig:tsne-embedding"
+    "tab:org9c87c36"
+    "tab:org57ac37e"
+    "sec:org45ebadd"
+    "sec:org6a416c4"
+    "fig:tine-embedding"
     "fig:silhouette-score"
-    "sec:org57b47c5"))
+    "sec:org8bd0427"))
  :latex)
 
